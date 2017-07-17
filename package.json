@@ -1,10 +1,10 @@
 {
-  "name": "innocom",
-  "version": "1.0.3",
+  "name": "innocss",
+  "version": "1.0.0",
   "description": "A lazy-thinking, CSS micro-framework. Minimal by design.",
   "repository": {
       "type": "git",
-      "url": "https://github.com/innosoftvn/innocom"
+      "url": "https://github.com/innosoftvn/innocss"
   },
   "keywords": [],
   "author": "Theodore <hoquangthaiholy@gmail.com>",
