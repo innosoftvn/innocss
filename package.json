@@ -1,8 +1,11 @@
 {
   "name": "innocom",
-  "version": "1.0.2",
-  "description": "InnoCom CSS",
-  "repository": "https://github.com/innosoftvn/innocom",
+  "version": "1.0.3",
+  "description": "A lazy-thinking, CSS micro-framework. Minimal by design.",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/innosoftvn/innocom"
+  },
   "keywords": [],
   "author": "Theodore <hoquangthaiholy@gmail.com>",
   "license": "ISC",
