@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InnoCom CSS</title>
+    <link rel="stylesheet" href="./dist/innocom.min.css">
+    <style media="screen">
+        .row {
+            margin: 10px 0;
+        }
+
+        .bg-gray {
+            background-color: #f7f7f7;
+        }
+
+        .bg-dark {
+            background-color: #aaa;
+        }
+
+        .bg-light {
+            background-color: #eee;
+        }
+
+        .row>div,
+        #color>div,
+        #utilities>div {
+            padding: 10px 20px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container text-center">
+            <h1>InnoCSS<br> <small class="muted">A lazy-thinking, tiny CSS framework.</small></h1>
+            <a href="#" class="btn ripple" title="InnoCSS source code">Github</a>
+            <p></p>
+        </div>
+    </section>
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Why InnoCSS?</h2>
+            <p>
+                InnoCSS is <em>truly</em> mobile-first and nearly all dimensions are done in <code>rem</code>. It also has a small footprint, cutting down on the bandwidth necessary for downloading CSS. InnoCSS is intended to be just that, furtive. It's
+                the perfect starting point to get your project up and running.
+            </p>
+            <p>
+                InnoCSS remains lightweight because it doesn't preoccupy itself with older browsers. As a result, InnoCSS can use cutting edge tech like <a href="http://caniuse.com/#search=flexbox">flexbox</a>,
+                <a href="http://caniuse.com/#search=svg">SVGs</a>, and limited vendor prefixing. It's also available in SCSS, CSS, and comes with a gulpfile for customizing the build.
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Responsive Grid System</h2>
+            <p>
+                InnoCSS comes with a responsive grid system based on <code>display: flex;</code>. There are 6 available columns, however this is easy to customize since it's dynamically generated as part of the build process with
+                <a href="https://github.com/johnotander/rework-flex-grid">rework-flex-grid</a>.
+            </p>
+            <code>.row &gt; .col-*</code>
+            <div class="row">
+                <div class="col-1 bg-dark">
+                    .col-1
+                </div>
+                <div class="col-5 bg-light">
+                    .col-5
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 bg-dark">
+                    .col-2
+                </div>
+                <div class="col-4 bg-light">
+                    .col-4
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 bg-dark">
+                    .col-3
+                </div>
+                <div class="col-3 bg-light">
+                    .col-3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 bg-dark">
+                    .col-4
+                </div>
+                <div class="col-2 bg-light">
+                    .col-2
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 bg-dark">
+                    .col-5
+                </div>
+                <div class="col-1 bg-light">
+                    .col-1
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 bg-dark">
+                    .col-6
+                </div>
+            </div>
+
+            <p>Use classes ending in <code>-sm</code>, <code>-md</code>, and <code>-lg</code> to make columns that can stack on viewports with different widths. Try resizing the browser to see the effect on the columns&nbsp;below. </p>
+
+            <!-- md column examples -->
+            <div class="row">
+                <div class="col-2-sm bg-dark">
+                    .col-2-sm
+                </div>
+                <div class="col-4-sm bg-light">
+                    .col-4-sm
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3-sm bg-dark">
+                    .col-3-sm
+                </div>
+                <div class="col-3-sm bg-light">
+                    .col-3-sm
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4-sm bg-dark">
+                    .col-4-sm
+                </div>
+                <div class="col-2-sm bg-light">
+                    .col-2-sm
+                </div>
+            </div>
+            <!-- end examples -->
+
+            <!-- md column examples -->
+            <div class="row">
+                <div class="col-2-md bg-dark">
+                    .col-2-md
+                </div>
+                <div class="col-4-md bg-light">
+                    .col-4-md
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3-md bg-dark">
+                    .col-3-md
+                </div>
+                <div class="col-3-md bg-light">
+                    .col-3-md
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4-md bg-dark">
+                    .col-4-md
+                </div>
+                <div class="col-2-md bg-light">
+                    .col-2-md
+                </div>
+            </div>
+            <!-- end examples -->
+
+            <!-- lg column examples -->
+
+            <div class="row">
+                <div class="col-2-lg bg-dark">
+                    .col-2-lg
+                </div>
+                <div class="col-4-lg bg-light">
+                    .col-4-lg
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3-lg bg-dark">
+                    .col-3-lg
+                </div>
+                <div class="col-3-lg bg-light">
+                    .col-3-lg
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4-lg bg-dark">
+                    .col-4-lg
+                </div>
+                <div class="col-2-lg bg-light">
+                    .col-2-lg
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Forms</h2>
+            <p>Forms are typically a key component for most websites and web applications. As such, InnoCSS seeks to keep them consistent, coherent, and elegant for all devices.</p>
+            <form action="#">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name...">
+                <label for="email">Email</label>
+                <input type="email" name "email"="" id="email" placeholder="user@example.com">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="8 characters or more...">
+                <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" rows="3" placeholder="Tell us about yourself..."></textarea>
+                <input type="checkbox" name="newsletter" id="newsletter">
+                <label for="newsletter">Subscribe to our newsletter</label>
+                <input type="submit" value="Create Account" class="btn-primary">
+            </form>
+            <p></p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Buttons</h2>
+            <p>
+                There are only a few buttons included, to keep the footprint small. However, the <code>.btn</code> class can be extended to add custom colors and styling.
+            </p>
+
+            <a href="#!" class="ripple btn" title="InnoCSS button example">Default</a>
+            <a href="#!" class="ripple btn-info" title="InnoCSS button example">Info</a>
+            <a href="#!" class="ripple btn-primary" title="InnoCSS button example">Primary</a>
+            <a href="#!" class="ripple btn-warning" title="InnoCSS button example">Warning</a>
+            <a href="#!" class="ripple btn-success" title="InnoCSS button example">Success</a>
+            <a href="#!" class="ripple btn-danger" title="InnoCSS button example">Danger</a>
+            <a href="#!" class="ripple btn-link" title="InnoCSS button example">Link</a>
+
+            <h4 class="muted">Small buttons</h4>
+            <p>You can also add <code>.btn-sm</code> for smaller buttons.</p>
+            <a href="#!" class="btn-sm btn" title="InnoCSS button example">Default</a>
+            <a href="#!" class="btn-sm btn-info" title="InnoCSS button example">Info</a>
+            <a href="#!" class="btn-sm btn-primary" title="InnoCSS button example">Primary</a>
+            <a href="#!" class="btn-sm btn-warning" title="InnoCSS button example">Warning</a>
+            <a href="#!" class="btn-sm btn-success" title="InnoCSS button example">Success</a>
+            <a href="#!" class="btn-sm btn-danger" title="InnoCSS button example">Danger</a>
+            <a href="#!" class="btn-sm btn-link" title="InnoCSS button example">Link</a>
+
+            <p>You can also add <code>.btn-lg</code> for larger buttons.</p>
+            <a href="#!" class="btn-lg btn" title="InnoCSS button example">Default</a>
+            <a href="#!" class="btn-lg btn-info" title="InnoCSS button example">Info</a>
+            <a href="#!" class="btn-lg btn-primary" title="InnoCSS button example">Primary</a>
+            <a href="#!" class="btn-lg btn-warning" title="InnoCSS button example">Warning</a>
+            <a href="#!" class="btn-lg btn-success" title="InnoCSS button example">Success</a>
+            <a href="#!" class="btn-lg btn-danger" title="InnoCSS button example">Danger</a>
+            <a href="#!" class="btn-lg btn-link" title="InnoCSS button example">Link</a>
+            <p></p>
+        </div>
+    </section>
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Media Objects</h2>
+            <p>
+                As <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/" title="Media object article by Stubbornella">Stubbornella</a> would say, the media object saves hundreds of lines of code. InnoCSS
+                is inclined to agree.
+            </p>
+
+            <div class="media">
+                <div class="media-figure">
+                    <img src="http://www.gravatar.com/avatar/2e52ef263083c77e2a0a24454dc6f369.png" alt="John Otander avatar">
+                </div>
+                <div class="media-body">
+                    <h6>John Otander</h6>
+                    <p>
+                        I think the media objects using <code>flex</code> are pretty rad. The CSS is lightweight, and can be reused all over the place. Everyone's happy.
+                    </p>
+                    <div class="media">
+                        <div class="media-figure">
+                            <img src="http://www.gravatar.com/avatar/2e52ef263083c77e2a0a24454dc6f369.png" alt="John Otander avatar">
+                        </div>
+                        <div class="media-body">
+                            <h6>John Otander</h6>
+                            <p>
+                                They even nest. Not bad for about 10 lines of CSS. Now we wait for caniuse to report more favorably for the flex box.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Tables</h2>
+
+            <p>
+                Tables are responsive, and beautiful, right out of the box. Support <code>.striped</code>, <code>.bordered</code>, <code>.condensed</code> and <code>.hover</code>
+            </p>
+            <div style="overflow: auto">
+                <table class="bordered hover">
+                    <caption>Caption table here</caption>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>twitter</th>
+                            <th>email</th>
+                            <th>website</th>
+                            <th>beer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John</td>
+                            <td>@4lpine</td>
+                            <td>johnotander@gmail.com</td>
+                            <td><a href="http://johnotander.com" title="John Otander's website.">johnotander.com</a></td>
+                            <td>Fresh Squeezed IPA</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ryan</td>
+                            <td>@sessynine</td>
+                            <td>sessynine@gmail.com</td>
+                            <td><a href="http://sessynine.com" title="Ryan Shelton's website.">sessynine.com</a></td>
+                            <td>Coors Light</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p></p>
+        </div>
+    </section>
+
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Lists</h2>
+
+            <p>
+                Simple, elegant, and nearly raw HTML. Some things don't really need to change.
+            </p>
+
+            <h4 class="muted">Ordered</h4>
+            <ol>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+            </ol>
+
+            <h4 class="muted">Unordered</h4>
+            <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Citrus</li>
+                <ul>
+                    <li>Limes</li>
+                    <li>Oranges</li>
+                    <li>Grapefruit</li>
+                </ul>
+            </ul>
+
+            <h4 class="muted">Unstyled</h4>
+            <ul class="list-unstyled">
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Oranges</li>
+            </ul>
+            <p></p>
+        </div>
+    </section>
+    <section>
+        <div class="container" id="color">
+            <h2>Colors</h2>
+
+            <p>
+                Inspiration is drawn from <a href="http://clrs.cc" title="Colors.css website">colors.css</a> and
+                <a href="http://getbootstrap.com" title="Bootstrap website">bootstrap</a> to provide helper classes and variables.
+            </p>
+
+            <h4 class="muted" id="background-color">Backgrounds</h4>
+            <p>
+                There's an assortment of background colors that can be used for flash messages, table headings... anything.
+            </p>
+            <div class="bg-white">.bg-white</div>
+            <div class="bg-light">.bg-light-gray</div>
+            <div class="text-white bg-dark">.bg-dark-gray</div>
+            <div class="text-white bg-info">.bg-info</div>
+            <div class="text-white bg-primary">.bg-primary</div>
+            <div class="text-white bg-success">.bg-success</div>
+            <div class="text-white bg-warning">.bg-warning</div>
+            <div class="text-white bg-danger">.bg-danger</div>
+
+            <h4 class="muted" id="borders">Borders</h4>
+
+            <p>
+                There are a few border classes to take advantage of in order to frame content.
+            </p>
+
+            <div class="border-white">.border-white</div>
+            <div class="border-light">.border-light</div>
+            <div class="border-dark">.border-dark</div>
+            <div class="border-info">.border-info</div>
+            <div class="border-primary">.border-primary</div>
+            <div class="border-success">.border-success</div>
+            <div class="border-warning">.border-warning</div>
+            <div class="border-danger">.border-danger</div>
+
+            <h4 class="muted" id="text-color">Text Colors</h4>
+            <p>
+                You can also modify the text color.
+            </p>
+            <div class="bg-dark text-white">.text-white</div>
+            <div class="bg-dark text-light">.text-light</div>
+            <div class="text-dark">.text-dark</div>
+            <div class="text-info">.text-info</div>
+            <div class="text-primary">.text-primary</div>
+            <div class="text-success">.text-success</div>
+            <div class="text-warning">.text-warning</div>
+            <div class="text-danger">.text-danger</div>
+        </div>
+        <p></p>
+    </section>
+    <section>
+        <div class="container" id="utilities">
+            <h2>Utilities</h2>
+            <p>There's a collection of utility classes for modifying the interface.</p>
+            <h4 class="muted">Floats</h4>
+            <dl>
+                <dt>Float Left</dt>
+                <dd><code>.pull-left</code></dd>
+                <dt>Float Right</dt>
+                <dd><code>.pull-right</code></dd>
+                <dt>Float None</dt>
+                <dd><code>.pull-none</code></dd>
+            </dl>
+
+            <h4 class="muted">Text Alignment</h4>
+            <div class="bg-light text-left">.txt--left</div>
+            <div class="bg-light text-right">.txt--right</div>
+            <div class="bg-light text-center">.txt--center</div>
+            <p></p>
+        </div>
+    </section>
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Type</h2>
+            <p>
+                The typography is minimal, and full of contrast. Not to mention, all the key components are based on Scss variables that can be changed to give a custom look and feel.
+            </p>
+            <h4 class="muted">Utilities</h4>
+            <p>
+                In order to ensure that you can modify type styling on the fly, there are <span class="italic">italics</span>, <span class="thin">thin</span>,
+                <span class="bold">bold</span>, <span class="caps">caps</span>, and
+                <span class="small">small</span>, <span class="muted">muted</span>,
+                <code>code</code> classes.
+            </p>
+            <h4 class="muted">Headings</h4>
+            <p>
+                There are also heading classes available the represent heading styles. This results in semantic HTML that still has the styling that you are looking for.
+            </p>
+            <p>
+                <span class="h1">.h1</span>
+                <span class="h2">.h2</span>
+                <span class="h3">.h3</span>
+                <span class="h4">.h4</span>
+                <span class="h5">.h5</span>
+                <span class="h6">.h6</span>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Menu</h2>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tutorials</a>
+                    <ul>
+                        <li><a href="#">HTML / CSS</a></li>
+                        <li><a href="#">JS / jQuery</a>
+                            <ul>
+                                <li><a href="#">jQuery</a></li>
+                                <li><a href="#">JS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">XSLT</a></li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Resources</a>
+                    <ul>
+                        <li><a href="#">By category</a>
+                            <ul>
+                                <li><a href="#">PHP</a></li>
+                                <li><a href="#">MySQL</a></li>
+                                <li><a href="#">Menu1</a>
+                                    <ul>
+                                        <li><a href="#">Menu1</a></li>
+                                        <li><a href="#">Menu2</a></li>
+                                        <li><a href="#">Menu3</a>
+                                            <ul>
+                                                <li><a href="#">Menu31</a></li>
+                                                <li><a href="#">Menu32</a></li>
+                                                <li><a href="#">Menu33</a></li>
+                                                <li><a href="#">Menu34</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Menu4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Ajax</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">By tag name</a>
+                            <ul>
+                                <li><a href="#">captcha</a></li>
+                                <li><a href="#">gallery</a></li>
+                                <li><a href="#">animation</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <p></p>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Tabs</h2>
+            <div class="tabs">
+
+                <input type="radio" name="tabs" id="tabone" checked="checked">
+                <label for="tabone">Tab One</label>
+                <div class="tab">
+                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
+                        synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                </div>
+
+                <input type="radio" name="tabs" id="tabtwo">
+                <label for="tabtwo">Tab Two</label>
+                <div class="tab">
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
+                        letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore
+                        stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed
+                        echo park.</p>
+                </div>
+
+                <input type="radio" name="tabs" id="tabthree">
+                <label for="tabthree">Tab Three</label>
+                <div class="tab">
+                    <p>Tab 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="//localhost:35729/livereload.js"></script>
+</body>
+
+</html>

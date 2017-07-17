@@ -1,0 +1,55 @@
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+@for $i from 1 through $max-columns {
+  .col-#{$i} { max-width: $i * 100%/$max-columns; flex-basis: $i * 100%/$max-columns; }
+}
+
+$list-sm: '.col-1-sm';
+$list-md: '.col-1-md';
+$list-no: '.col-1';
+$list-lg: '.col-1-lg';
+@for $i from 2 through $max-columns {
+  $list-sm: $list-sm + ', .col-' + $i + '-sm';
+  $list-md: $list-md + ', .col-' + $i + '-md';
+  $list-no: $list-no + ', .col-' + $i;
+  $list-lg: $list-lg + ', .col-' + $i + '-lg';
+}
+
+#{$list-sm + ',' + $list-md + ',' + $list-no + ',' + $list-lg} {
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#{$list-sm + ',' + $list-md + ',' + $list-lg} {
+  max-width: 100%;
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: $viewport-s) {
+    @for $i from 1 through $max-columns {
+      .col-#{$i}-sm { max-width: $i * 100%/$max-columns; flex-basis: $i * 100%/$max-columns;
+      }
+    }
+}
+
+@media screen and (min-width: $viewport-m) {
+    @for $i from 1 through $max-columns {
+      .col-#{$i}-md { max-width: $i * 100%/$max-columns; flex-basis: $i * 100%/$max-columns;
+      }
+    }
+}
+
+@media screen and (min-width: $viewport-l) {
+    @for $i from 1 through $max-columns {
+      .col-#{$i}-lg { max-width: $i * 100%/$max-columns; flex-basis: $i * 100%/$max-columns;
+      }
+    }
+
+}

@@ -1,0 +1,66 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+  max-width: 100%;
+}
+
+table caption {
+  font-style: italic;
+  font-weight: 80%;
+  text-align: left;
+  padding: $input-padding/2 0;
+}
+
+table td,
+table th {
+  margin: 0;
+  padding: $table-normal-padding;
+  border-bottom: 1px solid $table-border-color;
+
+  &:first-child {
+    border-left-width: 0;
+  }
+}
+
+table thead {
+  color: #000;
+  text-align: left;
+  border-bottom: 2px solid $table-border-color;
+}
+
+table.striped > tbody > tr:nth-of-type(odd) {
+  background-color: $table-strip-color;
+}
+
+table.bordered {
+  border: 1px solid #cbcbcb;
+
+  td {
+    border-bottom: 1px solid $table-border-color;
+    border-left: 1px solid $table-border-color;
+  }
+
+  th {
+    border-left: 1px solid $table-border-color;
+  }
+
+  tbody > tr:last-child > td {
+    border-bottom-width: 0;
+  }
+}
+
+table.bordered td,
+table.bordered th {
+  border-left: 1px solid $table-border-color;
+}
+
+table.condensed td,
+table.condensed th {
+  padding: $table-condensed-padding;
+}
+
+table.hover > tbody > tr:hover {
+  background-color: $table-strip-color;
+}

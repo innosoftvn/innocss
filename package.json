@@ -1,0 +1,13 @@
+{
+  "name": "innocom-css",
+  "version": "1.0.0",
+  "description": "InnoCom CSS",
+  "keywords": [],
+  "author": "Theodore",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

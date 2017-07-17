@@ -1,0 +1,116 @@
+%btn--base {
+  display: inline-block;
+  padding: $btn-padding/2 $btn-padding;
+  border: 1px solid $input-border-color;
+  border-radius: $btn-border-radius;
+  color: $font-color;
+  text-decoration: none;
+  text-align: center;
+  background: transparent;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.btn {
+  @extend %btn--base;
+  background-color: #fff;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: darken($font-color, 20%);
+  }
+}
+
+.btn-link {
+  @extend %btn--base;
+  border-color: transparent;
+  color: $link-color;
+
+  &:hover {
+    background-color: transparent;
+    color: darken($link-color, 15%);
+  }
+}
+
+.btn-primary {
+  @extend %btn--base;
+  border-color: darken($primary, 5%);
+  background-color: $primary;
+  color: $btn-text;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $btn-text;
+    background-color: darken($primary, 10%);
+  }
+}
+
+.btn-success {
+  @extend %btn--base;
+  border-color: darken($success, 5%);
+  background-color: $success;
+  color: $btn-text;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $btn-text;
+    background-color: darken($success, 10%);
+  }
+}
+
+.btn-warning {
+  @extend %btn--base;
+  border-color: darken($warning, 5%);
+  background-color: $warning;
+  color: $btn-text;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $btn-text;
+    background-color: darken($warning, 10%);
+  }
+}
+
+.btn-info {
+  @extend %btn--base;
+  border-color: darken($info, 5%);
+  background-color: $info;
+  color: $btn-text;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $btn-text;
+    background-color: darken($info, 10%);
+  }
+}
+
+.btn-danger {
+  @extend %btn--base;
+  border-color: darken($danger, 5%);
+  background-color: $danger;
+  color: $btn-text;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $btn-text;
+    background-color: darken($danger, 10%);
+  }
+}
+
+.btn-sm {
+  font-size: $font-size-s;
+  padding: $btn-padding/2;
+}
+
+.btn-lg {
+  font-size: $font-size-l;
+  padding: $btn-padding*.5 $btn-padding*1.5;
+}

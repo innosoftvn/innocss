@@ -1,0 +1,33 @@
+form {
+  label {
+    font-weight: bold;
+    display: inline-block;
+    max-width: 100%;
+    margin: 10px 0 5px 0;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    padding: $input-padding/2 $input-padding;
+    display: block;
+    width: 100%;
+    box-shadow: $input-shadow;
+    -webkit-box-shadow: $input-shadow;
+    border: thin solid $input-border-color;
+    border-radius: $input-border-radius;
+    margin: 0;
+  }
+
+  input[type="submit"] {
+    margin-top: 0.85rem;
+  }
+
+  input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+  }
+
+}
