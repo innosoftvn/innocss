@@ -1,7 +1,8 @@
 {
-  "name": "innocom-css",
+  "name": "innocom",
   "version": "1.0.0",
   "description": "InnoCom CSS",
+  "repository": "https://github.com/innosoftvn/innocom",
   "keywords": [],
   "author": "Theodore",
   "license": "ISC",
