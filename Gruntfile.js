@@ -9,7 +9,7 @@ grunt.initConfig({
         noCache: true
       },
       files: { // Dictionary of files
-        'dist/innocom.min.css': 'sass/all.scss', // 'destination': 'source'
+        'dist/app.css': 'sass/all.scss', // 'destination': 'source'
       }
     }
   },

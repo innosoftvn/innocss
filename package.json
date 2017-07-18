@@ -1,10 +1,10 @@
 {
   "name": "innocss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lazy-thinking, CSS micro-framework. Minimal by design.",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/innosoftvn/innocss"
+    "type": "git",
+    "url": "https://github.com/innosoftvn/innocss"
   },
   "keywords": [],
   "author": "Theodore <hoquangthaiholy@gmail.com>",
