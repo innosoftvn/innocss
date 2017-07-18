@@ -1,177 +1,192 @@
 ul.menu {
-  list-style: none;
-  padding: 0;
-  background-color: $menu-back-color;
-  border: $menu-border;
-
-  li {
-    a {
-      font-family: $menu-font;
-      text-decoration: none;
-      white-space: nowrap;
-      color: $menu-text-color;
-
-      &:not(:only-child):focus {
-        pointer-events: none;
-      }
-    }
-  }
-
-  ul {
-    display: none;
-    background-color: $submenu-back-color;
     list-style: none;
+    padding: 0;
     margin: 0;
-    z-index: 2;
-  }
 
-  &:after,
-  &:before {
-    content: " ";
-    display: table;
-  }
+    li {
+        a {
+            font-family: $menu-font;
+            text-decoration: none;
+            white-space: nowrap;
+            color: $menu-text-color;
 
-  &:after {
-    clear: both;
-  }
+            &:not(:only-child):focus {
+                pointer-events: none;
+            }
+        }
+    }
+
+    ul {
+        display: none;
+        background-color: $submenu-back-color;
+        list-style: none;
+        margin: 0;
+        z-index: 2;
+    }
+
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
 }
-@media screen and (min-width: $viewport-s) {
-  ul.menu {
+
+ul.menu.default {
+    background-color: $menu-back-color;
     border: $menu-border;
     border-radius: $menu-border-radius;
 
-    > li > a:not(:only-child):after {
-      content: '';
-      position: relative;
-      left: 6px;
-      top: 12px;
-      border-top: 5px solid #aaa;
-      border-bottom: 5px solid transparent;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-    }
-
-    li {
-      display: block;
-      position: relative;
-      float: left;
-      background: $menu-back-color;
-
-      a {
-        display: block;
-        padding: $menu-padding;
-
-        &:hover {
-          color: $menu-text-hover;
-          background-color: $menu-back-hover;
+    > li {
+        background: $menu-back-color;
+        > a {
+            padding: $menu-padding;
+            &:hover {
+                color: $menu-text-hover;
+                background-color: $menu-back-hover;
+            }
         }
-      }
+    }
+}
 
-      li.diliver {
-        height: 1px;
-        margin: 9px 0;
-        overflow: hidden;
-        background-color: #e5e5e5;
-      }
+ul.menu.fixed {
+    border-radius: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 
-      ul {
-        box-shadow: $submenu-box-shadow;
-        border-bottom-right-radius: $submenu-border-radius;
-        border-bottom-left-radius: $submenu-border-radius;
-        border: $submenu-border;
-        padding: 5px 0;
-        min-width: 160px;
-
+@media screen and (min-width: $viewport-s) {
+    ul.menu {
         > li > a:not(:only-child):after {
-          content: '';
-          position: absolute;
-          right: 5px;
-          top: 12px;
-          border-left: 5px solid #aaa;
-          border-bottom: 5px solid transparent;
-          border-top: 5px solid transparent;
-          border-right: 5px solid transparent;
+            content: '';
+            position: relative;
+            left: 6px;
+            top: 12px;
+            border-top: 5px solid #aaa;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
         }
 
         li {
-          float: none;
-          background-color: $submenu-back-color;
+            display: block;
+            position: relative;
+            float: left;
 
-          a {
-            background: $submenu-back-color;
-            padding: $submenu-padding;
-
-            &:hover {
-              background: $submenu-back-hover;
+            a {
+                display: block;
             }
 
-            &:not(:only-child):active + ul,
-            &:not(:only-child):focus + ul {
-              display: block;
-              position: absolute;
+            li.diliver {
+                height: 1px;
+                margin: 9px 0;
+                overflow: hidden;
+                background-color: $menu-back-color;
             }
-          }
+
+            ul {
+                box-shadow: $submenu-box-shadow;
+                border-bottom-right-radius: $submenu-border-radius;
+                border-bottom-left-radius: $submenu-border-radius;
+                border: $submenu-border;
+                padding: 5px 0;
+                min-width: 160px;
+
+                > li > a:not(:only-child):after {
+                    content: '';
+                    position: absolute;
+                    right: 5px;
+                    top: 12px;
+                    border-left: 5px solid $menu-text-color;
+                    border-bottom: 5px solid transparent;
+                    border-top: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                }
+
+                li {
+                    float: none;
+                    background-color: $submenu-back-color;
+
+                    a {
+                        background: $submenu-back-color;
+                        padding: $submenu-padding;
+
+                        &:hover {
+                            background: $submenu-back-hover;
+                        }
+
+                        &:not(:only-child):active + ul,
+                        &:not(:only-child):focus + ul {
+                            display: block;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
         }
-      }
-    }
 
-    ul ul {
-      left: 100%;
-      top: 0;
-    }
+        ul ul {
+            left: 100%;
+            top: 0;
+        }
 
-    li a:active + ul,
-    li a:focus + ul,
-    li ul:hover,
-    ul li a:active + ul,
-    ul li a:focus + ul,
-    ul li ul:hover {
-      display: block;
-      position: absolute;
+        li a:active + ul,
+        li a:focus + ul,
+        li ul:hover,
+        ul li a:active + ul,
+        ul li a:focus + ul,
+        ul li ul:hover {
+            display: block;
+            position: absolute;
+        }
     }
-  }
 }
 @media screen and (max-width: $viewport-s) {
-  ul.menu {
-    margin-left: -15px;
-    margin-right: -15px;
+    ul.menu {
+        margin-left: -15px;
+        margin-right: -15px;
 
-    >li {
-      &:not(:last-child){
-        border-bottom: $menu-border;
-      }
+        > li {
+            &:not(:last-child) {
+                border-bottom: $menu-border;
+            }
 
-      >ul {
-        border-top: $menu-border;
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
-      }
+            > ul {
+                border-top: $menu-border;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+            }
 
-      a {
-        display: block;
-        padding: $menu-padding*.75;
+            a {
+                display: block;
+                padding: $menu-padding*.75;
 
-        &:not(:only-child):after {
-          content: '';
-          float: right;
-          position: relative;
-          top: 8px;
-          border-top: 7px solid #aaa;
-          border-bottom: 7px solid transparent;
-          border-left: 7px solid transparent;
-          border-right: 7px solid transparent;
+                &:not(:only-child):after {
+                    content: '';
+                    float: right;
+                    position: relative;
+                    top: 8px;
+                    border-top: 7px solid #aaa;
+                    border-bottom: 7px solid transparent;
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                }
+            }
         }
-      }
-    }
 
-    li a:active + ul,
-    li a:focus + ul,
-    li ul:hover,
-    ul li a:active + ul,
-    ul li a:focus + ul,
-    ul li ul:hover {
-      display: block;
+        li a:active + ul,
+        li a:focus + ul,
+        li ul:hover,
+        ul li a:active + ul,
+        ul li a:focus + ul,
+        ul li ul:hover {
+            display: block;
+        }
     }
-  }
 }
