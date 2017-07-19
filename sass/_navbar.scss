@@ -20,6 +20,21 @@ ul.navbar {
         list-style: none;
         margin: 0;
         z-index: 2;
+
+        li.diliver {
+            height: 1px;
+            margin: 9px 0;
+            overflow: hidden;
+            background-color: $navbar-border-color;
+        }
+
+        li.header {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: lighten($navbar-text-color,25%);
+            font-weight: bold;
+            padding: 3px 15px;
+        }
     }
 
     &:after,
@@ -34,17 +49,6 @@ ul.navbar {
 }
 @media screen and (min-width: $viewport-s) {
     ul.navbar {
-        > li > a:not(:only-child):after {
-            content: '';
-            position: relative;
-            left: 6px;
-            top: 12px;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-        }
-
         li {
             display: block;
             position: relative;
@@ -53,31 +57,11 @@ ul.navbar {
             a {
                 display: block;
             }
-
-            li.diliver {
-                height: 1px;
-                margin: 9px 0;
-                overflow: hidden;
-                background-color: $navbar-back-color;
-            }
-
             ul {
                 @include box-shadow($subbar-box-shadow);
-                @include border-radius($subbar-border-radius);
                 border: $subbar-border;
                 padding: 5px 0;
                 min-width: 160px;
-
-                > li > a:not(:only-child):after {
-                    content: '';
-                    position: absolute;
-                    right: 5px;
-                    top: 12px;
-                    border-left: 5px solid $navbar-text-color;
-                    border-bottom: 5px solid transparent;
-                    border-top: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                }
 
                 li {
                     float: none;
@@ -137,17 +121,6 @@ ul.navbar {
             a {
                 display: block;
                 padding: $navbar-padding*.75;
-
-                &:not(:only-child):after {
-                    content: '';
-                    float: right;
-                    position: relative;
-                    top: 8px;
-                    border-top: 7px solid #aaa;
-                    border-bottom: 7px solid transparent;
-                    border-left: 7px solid transparent;
-                    border-right: 7px solid transparent;
-                }
             }
         }
 
@@ -190,4 +163,37 @@ ul.navbar.navbar-fixed {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+a.carret,
+.btn.carret {
+    padding-right: 25px !important;
+}
+
+.carret::after {
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+}
+
+.carret.carret-left::after {
+    top: 35%;
+    right: 5px;
+    border-left-color: #aaa;
+}
+
+.carret.carret-top::after {
+    top: 45%;
+    right: 10px;
+    border-top-color: #aaa;
+}
+.carret.carret-right::after {
+    top: 35%;
+    right: 5px;
+    border-right-color: #aaa;
+}
+.carret.carret-bottom::after {
+    top: 45%;
+    right: 10px;
+    border-bottom-color: #aaa;
 }
