@@ -1,0 +1,26 @@
+.round {
+    border-radius: 6px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.thumbnail {
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.media .media-figure {
+    margin-right: 1em;
+}
+
+.media .media-body {
+    flex: 1 0 0;
+}

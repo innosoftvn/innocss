@@ -1,96 +1,80 @@
-$viewport-s          : 768px !default;
-$viewport-m          : 992px !default;
-$viewport-l          : 1200px !default;
+// Base
+$viewport-s                : 768px !default;
+$viewport-m                : 992px !default;
+$viewport-l                : 1200px !default;
+$container-width           : 1170px !default;
 
-// Font sizes
+// Grid
+$max-columns               : 6;
 
-$font-size            : 14px !default;
-$font-size-s          : ceil($font-size * 0.85) !default;
-$font-size-l          : ceil($font-size * 1.25) !default;
+// Color
+$default                   : #f5f5f5 !default;
+$danger                    : #e74c3c !default;
+$warning                   : #f0ad4e !default;
+$primary                   : #3498db !default;
+$info                      : #5bc0de !default;
+$success                   : #5cb85c !default;
 
-$font-size-h1         : floor($font-size * 2.6) !default;
-$font-size-h2         : floor($font-size * 2.15) !default;
-$font-size-h3         : ceil($font-size * 1.7) !default;
-$font-size-h4         : ceil($font-size * 1.25) !default;
-$font-size-h5         : $font-size !default;
-$font-size-h6         : ceil($font-size * 0.85) !default;
+// Typo
+$font-family               : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,sans-serif !default;
+$font-weight               : 400 !default;
+$font-color                : #333333 !default;
+$line-height               : 1.42857143 !default;
 
-$font-weight          : 400 !default;
-$font-color           : #333 !default;
-$line-height          : 1.42857143 !default;
-$line-height-computed : floor($font-size * $line-height) !default;
+$headings-font-family      : inherit !default;
+$headings-font-weight      : 500 !default;
+$headings-line-height      : 1.1 !default;
+$headings-color            : inherit !default;
 
-// Fonts
-$headings-font-family : inherit !default;
-$headings-font-weight : 500 !default;
-$headings-line-height : 1.1 !default;
-$headings-color       : inherit !default;
+$monospace-font-family     : "Monaco", "Lucida Console", Courier, monospace !default;
 
-$font-family          : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial,sans-serif !default;
-$monospace-font-family: "Monaco", "Lucida Console", Courier, monospace !default;
+$font-size                 : 14px !default;
+$font-size-s               : ceil($font-size * 0.85) !default;
+$font-size-l               : ceil($font-size * 1.25) !default;
 
-// Example for using Google Fonts
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-// $font-family          : "Open Sans", Helvetica, Arial, sans-serif !default;
-// $headings-font-family : "Open Sans Light" !default;
+$font-size-h1              : floor($font-size * 2.6) !default;
+$font-size-h2              : floor($font-size * 2.15) !default;
+$font-size-h3              : ceil($font-size * 1.7) !default;
+$font-size-h4              : ceil($font-size * 1.25) !default;
+$font-size-h5              : $font-size !default;
+$font-size-h6              : ceil($font-size * 0.85) !default;
 
-$default              : #fff !default;
-$danger               : #e74c3c !default;
-$warning              : #f0ad4e !default;
-$primary              : #3498db !default;
-$info                 : #5bc0de !default;
-$success              : #5cb85c !default;
-$light-gray           : #eee !default;
-$dark-gray            : #aaa !default;
-
-$link-color           : $primary !default;
-
-$container-width      : 1170px !default;
-$max-columns          : 6;
+$link-color                : $primary !default;
 
 // Button
-$btn-padding          : 12px;
-$btn-border-radius    : 4px !default;
-$btn-text             : #fff !default;
+$btn-padding               : 12px;
+$btn-border-radius         : 4px !default;
+$btn-default-color         : #333 !default;
+$btn-default-back          : #fff !default;
+$btn-default-border        : 1px solid #ccc !default;
 
 // Form
-$input-padding        : 12px;
-$input-border-radius  : 4px !default;
-$input-border-color  : #ccc;
-$input-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+$input-padding             : 12px;
+$input-border-radius       : 4px !default;
+$input-border              : 1px solid #ccc;
+$input-shadow              : inset 0 1px 1px rgba(0,0,0,.075);
 
 // Table
-$table-strip-color: #f9f9f9;
-$table-border-color: #ddd;
-$table-normal-padding: 8px;
+$table-strip-color      : #f9f9f9;
+$table-border-color     : #ddd;
+$table-normal-padding   : 8px;
 $table-condensed-padding: 5px;
 
 // Menu
-$menu-font: inherit;
-$menu-border: 1px solid #e7e7e7;
-$menu-border-radius: 4px;
-$menu-padding: 16px;
-$menu-back-color: #f8f8f8;
-$menu-text-color: #777;
-$menu-back-hover: #eee;
-$menu-text-hover: #555;
-$menu-back-active: #eee;
-$menu-text-active: #555;
-$submenu-padding: 6px 16px;
-$submenu-border: 1px solid rgba(0,0,0,.15);
-$submenu-border-radius: 4px;
-$submenu-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-$submenu-back-color: #fff;
-$submenu-text-color: inherit !default;
-$submenu-back-hover: #f8f8f8;
-$submenu-text-hover: inherit !default;
-
-// Tabs
-$tabs-label-back: #fff;
-$tabs-label-text: #777;
-$tabs-label-back-hover: #eee;
-$tabs-label-text-hover: #555;
-$tabs-label-back-active: #fff;
-$tabs-label-text-active: #555;
-$tabs-label-border: 1px solid transparent;
-$tabs-label-border-active: 1px solid #ddd;
+$navbar-font              : inherit;
+$navbar-border-color      : #e7e7e7;
+$navbar-padding           : 16px;
+$navbar-back-color        : #f8f8f8;
+$navbar-text-color        : #777;
+$navbar-back-hover        : #eee;
+$navbar-text-hover        : #555;
+$navbar-back-active       : #eee;
+$navbar-text-active       : #555;
+$subbar-padding        : 6px 16px;
+$subbar-border         : 1px solid rgba(0,0,0,.15);
+$subbar-border-radius  : 4px;
+$subbar-box-shadow     : 0 6px 12px rgba(0,0,0,.175);
+$subbar-back-color     : #fff;
+$subbar-text-color     : inherit !default;
+$subbar-back-hover     : #f8f8f8;
+$subbar-text-hover     : inherit !default;

@@ -11,12 +11,12 @@ form {
   textarea {
     font-family: inherit;
     padding: $input-padding/2 $input-padding;
+    height: 34px;
     display: block;
     width: 100%;
-    box-shadow: $input-shadow;
-    -webkit-box-shadow: $input-shadow;
-    border: thin solid $input-border-color;
-    border-radius: $input-border-radius;
+    @include box-shadow($input-shadow);
+    @include border-radius($input-border-radius);
+    border: $input-border;
     margin: 0;
   }
 
@@ -26,8 +26,10 @@ form {
 
   input[type="checkbox"] {
     display: inline-block;
-    vertical-align: middle;
     width: auto;
+    vertical-align: middle;
+    @include box-shadow(none);
+    @include border-radius(0);
   }
 
 }

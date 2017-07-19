@@ -1,24 +1,22 @@
-ul.menu {
+ul.navbar {
     list-style: none;
     padding: 0;
     margin: 0;
 
-    li {
-        a {
-            font-family: $menu-font;
-            text-decoration: none;
-            white-space: nowrap;
-            color: $menu-text-color;
+    li a {
+        font-family: $navbar-font;
+        text-decoration: none;
+        white-space: nowrap;
+        color: $navbar-text-color;
 
-            &:not(:only-child):focus {
-                pointer-events: none;
-            }
+        &:not(:only-child):focus {
+            pointer-events: none;
         }
     }
 
     ul {
         display: none;
-        background-color: $submenu-back-color;
+        background-color: $subbar-back-color;
         list-style: none;
         margin: 0;
         z-index: 2;
@@ -34,40 +32,14 @@ ul.menu {
         clear: both;
     }
 }
-
-ul.menu.default {
-    background-color: $menu-back-color;
-    border: $menu-border;
-    border-radius: $menu-border-radius;
-
-    > li {
-        background: $menu-back-color;
-        > a {
-            padding: $menu-padding;
-            &:hover {
-                color: $menu-text-hover;
-                background-color: $menu-back-hover;
-            }
-        }
-    }
-}
-
-ul.menu.fixed {
-    border-radius: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
 @media screen and (min-width: $viewport-s) {
-    ul.menu {
+    ul.navbar {
         > li > a:not(:only-child):after {
             content: '';
             position: relative;
             left: 6px;
             top: 12px;
-            border-top: 5px solid #aaa;
+            border-top: 5px solid transparent;
             border-bottom: 5px solid transparent;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
@@ -86,14 +58,13 @@ ul.menu.fixed {
                 height: 1px;
                 margin: 9px 0;
                 overflow: hidden;
-                background-color: $menu-back-color;
+                background-color: $navbar-back-color;
             }
 
             ul {
-                box-shadow: $submenu-box-shadow;
-                border-bottom-right-radius: $submenu-border-radius;
-                border-bottom-left-radius: $submenu-border-radius;
-                border: $submenu-border;
+                @include box-shadow($subbar-box-shadow);
+                @include border-radius($subbar-border-radius);
+                border: $subbar-border;
                 padding: 5px 0;
                 min-width: 160px;
 
@@ -102,7 +73,7 @@ ul.menu.fixed {
                     position: absolute;
                     right: 5px;
                     top: 12px;
-                    border-left: 5px solid $menu-text-color;
+                    border-left: 5px solid $navbar-text-color;
                     border-bottom: 5px solid transparent;
                     border-top: 5px solid transparent;
                     border-right: 5px solid transparent;
@@ -110,14 +81,14 @@ ul.menu.fixed {
 
                 li {
                     float: none;
-                    background-color: $submenu-back-color;
+                    background-color: $subbar-back-color;
 
                     a {
-                        background: $submenu-back-color;
-                        padding: $submenu-padding;
+                        background: $subbar-back-color;
+                        padding: $subbar-padding;
 
                         &:hover {
-                            background: $submenu-back-hover;
+                            background: $subbar-back-hover;
                         }
 
                         &:not(:only-child):active + ul,
@@ -147,17 +118,17 @@ ul.menu.fixed {
     }
 }
 @media screen and (max-width: $viewport-s) {
-    ul.menu {
+    ul.navbar {
         margin-left: -15px;
         margin-right: -15px;
 
         > li {
             &:not(:last-child) {
-                border-bottom: $menu-border;
+                border-bottom: 1px solid $navbar-border-color;
             }
 
             > ul {
-                border-top: $menu-border;
+                border-top: 1px solid $navbar-border-color;
                 border-left: none;
                 border-right: none;
                 border-bottom: none;
@@ -165,7 +136,7 @@ ul.menu.fixed {
 
             a {
                 display: block;
-                padding: $menu-padding*.75;
+                padding: $navbar-padding*.75;
 
                 &:not(:only-child):after {
                     content: '';
@@ -189,4 +160,34 @@ ul.menu.fixed {
             display: block;
         }
     }
+}
+
+ul.navbar.navbar-default {
+    background-color: $navbar-back-color;
+    border: 1px solid $navbar-border-color;
+
+    > li {
+        background: $navbar-back-color;
+
+        > a:not(:only-child):after {
+            border-top-color: $navbar-text-color;
+        }
+
+        > a {
+            padding: $navbar-padding;
+
+            &:hover {
+                color: $navbar-text-hover;
+                background-color: $navbar-back-hover;
+            }
+        }
+    }
+}
+
+ul.navbar.navbar-fixed {
+    border-radius: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }

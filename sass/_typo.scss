@@ -36,9 +36,6 @@ h6 {
 h1,
 h2,
 h3 {
-    margin-top: $line-height-computed;
-    margin-bottom: ($line-height-computed / 2);
-
     .small,
     small {
         font-size: 65%;
@@ -51,8 +48,6 @@ h3 {
 h4,
 h5,
 h6 {
-    margin-top: ($line-height-computed / 2);
-    margin-bottom: ($line-height-computed / 2);
 
     .small,
     small {
@@ -92,11 +87,12 @@ h6 {
 
 .p,
 p {
-    margin: 0 0 ($line-height-computed / 2);
+
 }
 
 a {
     color: $link-color;
+    text-decoration: none;
 
     &:active,
     &:focus,
@@ -190,7 +186,7 @@ pre {
 
 .clearfix {
     &:after {
-        content: "";
+        content: '';
         display: table;
         clear: both;
     }

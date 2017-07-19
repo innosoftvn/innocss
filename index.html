@@ -374,9 +374,7 @@
             <p>
                 There's an assortment of background colors that can be used for flash messages, table headings... anything.
             </p>
-            <div class="bg-white">.bg-white</div>
-            <div class="bg-light">.bg-light-gray</div>
-            <div class="text-white bg-dark">.bg-dark-gray</div>
+            <div class="text-white bg-default">.bg-default</div>
             <div class="text-white bg-info">.bg-info</div>
             <div class="text-white bg-primary">.bg-primary</div>
             <div class="text-white bg-success">.bg-success</div>
@@ -389,9 +387,7 @@
                 There are a few border classes to take advantage of in order to frame content.
             </p>
 
-            <div class="border-white">.border-white</div>
-            <div class="border-light">.border-light</div>
-            <div class="border-dark">.border-dark</div>
+            <div class="border-default">.border-default</div>
             <div class="border-info">.border-info</div>
             <div class="border-primary">.border-primary</div>
             <div class="border-success">.border-success</div>
@@ -402,9 +398,7 @@
             <p>
                 You can also modify the text color.
             </p>
-            <div class="bg-dark text-white">.text-white</div>
-            <div class="bg-dark text-light">.text-light</div>
-            <div class="text-dark">.text-dark</div>
+            <div class="text-default">.text-default</div>
             <div class="text-info">.text-info</div>
             <div class="text-primary">.text-primary</div>
             <div class="text-success">.text-success</div>
@@ -414,57 +408,9 @@
         <p></p>
     </section>
     <section>
-        <div class="container" id="utilities">
-            <h2>Utilities</h2>
-            <p>There's a collection of utility classes for modifying the interface.</p>
-            <h4 class="muted">Floats</h4>
-            <dl>
-                <dt>Float Left</dt>
-                <dd><code>.pull-left</code></dd>
-                <dt>Float Right</dt>
-                <dd><code>.pull-right</code></dd>
-                <dt>Float None</dt>
-                <dd><code>.pull-none</code></dd>
-            </dl>
-
-            <h4 class="muted">Text Alignment</h4>
-            <div class="bg-light text-left">.txt--left</div>
-            <div class="bg-light text-right">.txt--right</div>
-            <div class="bg-light text-center">.txt--center</div>
-            <p></p>
-        </div>
-    </section>
-    <section class="bg-gray">
-        <div class="container">
-            <h2>Type</h2>
-            <p>
-                The typography is minimal, and full of contrast. Not to mention, all the key components are based on Scss variables that can be changed to give a custom look and feel.
-            </p>
-            <h4 class="muted">Utilities</h4>
-            <p>
-                In order to ensure that you can modify type styling on the fly, there are <span class="italic">italics</span>, <span class="thin">thin</span>,
-                <span class="bold">bold</span>, <span class="caps">caps</span>, and
-                <span class="small">small</span>, <span class="muted">muted</span>,
-                <code>code</code> classes.
-            </p>
-            <h4 class="muted">Headings</h4>
-            <p>
-                There are also heading classes available the represent heading styles. This results in semantic HTML that still has the styling that you are looking for.
-            </p>
-            <p>
-                <span class="h1">.h1</span>
-                <span class="h2">.h2</span>
-                <span class="h3">.h3</span>
-                <span class="h4">.h4</span>
-                <span class="h5">.h5</span>
-                <span class="h6">.h6</span>
-            </p>
-        </div>
-    </section>
-    <section>
         <div class="container">
             <h2>Menu</h2>
-            <ul class="menu default">
+            <ul class="navbar navbar-default">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Tutorials</a>
                     <ul>
@@ -520,35 +466,53 @@
         </div>
     </section>
     <section>
-        <div class="container">
-            <h2>Tabs</h2>
-            <div class="tabs">
+        <div class="container" id="utilities">
+            <h2>Utilities</h2>
+            <p>There's a collection of utility classes for modifying the interface.</p>
+            <h4 class="muted">Floats</h4>
+            <dl>
+                <dt>Float Left</dt>
+                <dd><code>.pull-left</code></dd>
+                <dt>Float Right</dt>
+                <dd><code>.pull-right</code></dd>
+                <dt>Float None</dt>
+                <dd><code>.pull-none</code></dd>
+            </dl>
 
-                <input type="radio" name="tabs" id="tabone" checked="checked">
-                <label for="tabone">Tab One</label>
-                <div class="tab">
-                    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
-                        synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-                </div>
-
-                <input type="radio" name="tabs" id="tabtwo">
-                <label for="tabtwo">Tab Two</label>
-                <div class="tab">
-                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth
-                        letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore
-                        stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed
-                        echo park.</p>
-                </div>
-
-                <input type="radio" name="tabs" id="tabthree">
-                <label for="tabthree">Tab Three</label>
-                <div class="tab">
-                    <p>Tab 3</p>
-                </div>
-            </div>
+            <h4 class="muted">Text Alignment</h4>
+            <div class="bg-light text-left">.text-left</div>
+            <div class="bg-light text-right">.text-right</div>
+            <div class="bg-light text-center">.text-center</div>
+            <p></p>
         </div>
     </section>
-    <script src="//localhost:35729/livereload.js"></script>
+    <section class="bg-gray">
+        <div class="container">
+            <h2>Type</h2>
+            <p>
+                The typography is minimal, and full of contrast. Not to mention, all the key components are based on Scss variables that can be changed to give a custom look and feel.
+            </p>
+            <h4 class="muted">Utilities</h4>
+            <p>
+                In order to ensure that you can modify type styling on the fly, there are <span class="italic">italics</span>, <span class="thin">thin</span>,
+                <span class="bold">bold</span>, <span class="caps">caps</span>, and
+                <span class="small">small</span>, <span class="muted">muted</span>,
+                <code>code</code> classes.
+            </p>
+            <h4 class="muted">Headings</h4>
+            <p>
+                There are also heading classes available the represent heading styles. This results in semantic HTML that still has the styling that you are looking for.
+            </p>
+            <p>
+                <span class="h1">.h1</span>
+                <span class="h2">.h2</span>
+                <span class="h3">.h3</span>
+                <span class="h4">.h4</span>
+                <span class="h5">.h5</span>
+                <span class="h6">.h6</span>
+            </p>
+        </div>
+    </section>
 </body>
 
 </html>

@@ -1,9 +1,9 @@
-%btn--base {
+%btn-base {
   display: inline-block;
   padding: $btn-padding/2 $btn-padding;
-  border: 1px solid $input-border-color;
-  border-radius: $btn-border-radius;
-  color: $font-color;
+  border: $btn-default-border;
+  @include border-radius($btn-border-radius);
+  color: $btn-default-color;
   text-decoration: none;
   text-align: center;
   background: transparent;
@@ -13,95 +13,90 @@
 }
 
 .btn {
-  @extend %btn--base;
-  background-color: #fff;
+  @extend %btn-base;
+  background-color: $btn-default-back;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: rgba(0,0,0,0.05);
-    color: darken($font-color, 20%);
+    background-color: darken($btn-default-back,2%);
+    color: $btn-default-color;
   }
 }
 
 .btn-link {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: transparent;
   color: $link-color;
-
-  &:hover {
-    background-color: transparent;
-    color: darken($link-color, 15%);
-  }
 }
 
 .btn-primary {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: darken($primary, 5%);
   background-color: $primary;
-  color: $btn-text;
+  color: #ffffff;
 
   &:active,
   &:focus,
   &:hover {
-    color: $btn-text;
-    background-color: darken($primary, 10%);
+    background-color: darken($primary, 5%);
+    color: #ffffff;
   }
 }
 
 .btn-success {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: darken($success, 5%);
   background-color: $success;
-  color: $btn-text;
+  color: #ffffff;
 
   &:active,
   &:focus,
   &:hover {
-    color: $btn-text;
-    background-color: darken($success, 10%);
+    background-color: darken($success, 5%);
+    color: #ffffff;
   }
 }
 
 .btn-warning {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: darken($warning, 5%);
   background-color: $warning;
-  color: $btn-text;
+  color: #ffffff;
 
   &:active,
   &:focus,
   &:hover {
-    color: $btn-text;
-    background-color: darken($warning, 10%);
+    background-color: darken($warning, 5%);
+    color: #ffffff;
   }
 }
 
 .btn-info {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: darken($info, 5%);
   background-color: $info;
-  color: $btn-text;
+  color: #ffffff;
 
   &:active,
   &:focus,
   &:hover {
-    color: $btn-text;
-    background-color: darken($info, 10%);
+    background-color: darken($info, 5%);
+    color: #ffffff;
   }
 }
 
 .btn-danger {
-  @extend %btn--base;
+  @extend %btn-base;
   border-color: darken($danger, 5%);
   background-color: $danger;
-  color: $btn-text;
+  color: #ffffff;
 
   &:active,
   &:focus,
   &:hover {
-    color: $btn-text;
-    background-color: darken($danger, 10%);
+    background-color: darken($danger, 5%);
+    color: #ffffff;
   }
 }
 
